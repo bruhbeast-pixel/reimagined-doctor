@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới thiệu Bác sĩ Tăng Thường Bản</title>
+    <link rel="icon" href="icon.png" type="image/png"> <!-- Favicon -->
+    <style>
+        body {
+            font-family: 'Century Gothic', Arial, sans-serif;
+            font-weight: bold;
+            background: linear-gradient(135deg, #00ffff, #0000ff, #8a2be2);
+            background-size: 400% 400%;
+            animation: gradientAnimation 15s ease infinite;
+            color: #000; /* Changed text color to black */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            max-width: 600px;
+            text-align: center;
+            position: relative;
+        }
+        h1 {
+            color: #000; /* Ensures the heading text is black */
+        }
+        p, ul {
+            line-height: 1.6;
+            color: #000; /* Changed paragraph and list text color to black */
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #000; /* Changed footer text color to black */
+        }
+        .note-bubble {
+            background: linear-gradient(135deg, #00ffff, #0000ff, #8a2be2);
+            color: #fff; /* Keeps note bubble text white */
+            border-radius: 12px;
+            padding: 10px;
+            position: absolute;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+            font-size: 1em;
+            cursor: pointer;
+            animation: pulseAnimation 2s infinite;
+        }
+        .note-bubble.phone {
+            bottom: 20px;
+            left: 20px;
+        }
+        .note-bubble.info {
+            bottom: 20px;
+            right: 20px;
+        }
+        .portrait {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+        .modal-content {
+            background: #fff;
+            margin: 15% auto;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 600px;
+            position: relative;
+        }
+        .modal-content img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 1.5em;
+            color: #000;
+            cursor: pointer;
+        }
+        .button {
+            background: linear-gradient(135deg, #00ffff, #0000ff, #8a2be2);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 15px 30px;
+            font-size: 1em;
+            cursor: pointer;
+            margin: 10px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .button:hover {
+            background: linear-gradient(135deg, #0000ff, #8a2be2, #00ffff);
+        }
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 0%; }
+            50% { background-position: 100% 100%; }
+            100% { background-position: 0% 0%; }
+        }
+        @keyframes pulseAnimation {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <audio id="background-audio" src="https://cdn.discordapp.com/attachments/1137576703066116168/1273434185679376404/calm-morning-125568.mp3?ex=66be9981&is=66bd4801&hm=8db983db9083348e9525d3ff110f5ea19f7b84741b28d1e07ef77e4bbef3f2f0&" loop></audio>
+
+    <div class="container">
+        <h1>Chào mừng đến với trang web của Bác sĩ Tăng Thường Bản</h1>
+        <img src="https://cdn.discordapp.com/attachments/1177979809599606796/1273440302132363408/SPOILER_image.png?ex=66be9f33&is=66bd4db3&hm=bdd358855c7f124f8efd52555a23a71368c691974dcfdae59ef03fd104df21a0&" alt="Bác sĩ Tăng Thường Bản" class="portrait">
+        <p>Xin chào! Tôi là Bác sĩ Tăng Thường Bản, một bác sĩ tận tâm chuyên về Sản phụ khoa. Với nhiều năm kinh nghiệm và cam kết cung cấp sự chăm sóc bệnh nhân tốt nhất, tôi ở đây để giúp bạn với các nhu cầu y tế của mình.</p>
+        <p>Chuyên môn của tôi tập trung vào Khám sản phụ khoa. Tôi luôn nỗ lực để mang đến một cách tiếp cận đầy cảm thông và toàn diện đối với sức khỏe và sự chăm sóc.</p>
+        <p>Hãy liên hệ với tôi để được tư vấn, đặt lịch hẹn hoặc bất kỳ câu hỏi nào bạn có thể có. Sức khỏe của bạn là ưu tiên hàng đầu của tôi!</p>
+        <h2>Thông tin phòng khám</h2>
+        <p>Thạc sĩ, Bác sĩ CK2 Tăng Thường Bản hiện đang công tác tại Bệnh viện Hùng Vương (từ năm 2009 – nay). Phòng khám bác sĩ là lựa chọn uy tín, chất lượng của rất nhiều bệnh nhân khu vực quận Bình Tân và TP.HCM.</p>
+        <p>Bác sĩ Tăng Thường Bản được biết đến là một trong những bác sĩ giỏi, có kinh nghiệm lâu năm và nhiệt tình, tận tụy với bệnh nhân.</p>
+        <p>Một số thiết bị có tại phòng khám: máy siêu âm, máy soi cổ tử cung, máy đo monitor sản khoa,…</p>
+        <p>Địa chỉ phòng khám Bác sĩ Bản: 284 đường số 1, P. Bình Trị Đông B, Q. Bình Tân, TP.HCM.</p>
+        <p>Dịch vụ phòng khám:</p>
+        <ul>
+            <li>Đặt vòng tránh thai.</li>
+            <li>Điều trị hiếm muộn.</li>
+            <li>Tầm soát ung thư cổ tử cung.</li>
+            <li>Siêu âm thai.</li>
+            <li>Khám sản khoa.</li>
+            <li>Khám phụ khoa.</li>
+        </ul>
+        <p>Giờ làm việc: Thứ 2, Thứ 4, Thứ 5, Thứ 6 (17 giờ – 20 giờ 30).</p>
+        <footer>
+            <p>&copy; 2024 Bác sĩ Tăng Thường Bản. Bảo lưu mọi quyền.</p>
+        </footer>
+        <a href="tel:0933320080" class="note-bubble phone">
+            ĐT: 0933320080
+        </a>
+        <a href="#" class="note-bubble info" id="more-info">
+            More info...
+        </a>
+    </div>
+
+    <!-- Modal -->
+    <div id="info-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-modal">&times;</span>
+            <img src="https://lh3.googleusercontent.com/p/AF1QipPj-YjTWcUrz-ct2N3QPZ_Skbp8Onoa21mCmdUu=s680-w680-h510" alt="More Info">
+        </div>
+    </div>
+
+    <!-- Next Page -->
+    <div id="next-page" style="display: none;">
+        <div class="container">
+            <h1>Trang tiếp theo</h1>
+            <p>Để biết thêm thông tin, hãy nhấp vào các liên kết dưới đây:</p>
+            <a href="https://www.facebook.com/PksanphukhoabsTangthuongban/" target="_blank" class="button">
+                Facebook
+            </a>
+            <a href="https://g.co/kgs/FhWVb6s" target="_blank" class="button">
+                Google Maps
+            </a>
+            <a href="#" id="back-button" class="button">Quay lại</a>
+        </div>
+    </div>
+
+    <script>
+        // Get modal element and buttons
+        var modal = document.getElementById('info-modal');
+        var moreInfoBtn = document.getElementById('more-info');
+        var closeModalBtn = document.getElementById('close-modal');
+
+        // Open the modal when "More info..." is clicked
+        moreInfoBtn.onclick = function() {
+            modal.style.display = 'block';
+        };
+
+        // Close the modal when the close button is clicked
+        closeModalBtn.onclick = function() {
+            modal.style.display = 'none';
+        };
+
+        // Close the modal when clicking outside of the modal content
+        window.onclick = function(event) {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        };
+
+        // Show the next page content and hide the current content
+        function showNextPage() {
+            document.querySelector('.container').style.display = 'none';
+            document.getElementById('next-page').style.display = 'block';
+        }
+
+        // Hide the next page content and show the current content
+        document.getElementById('back-button').onclick = function() {
+            document.querySelector('.container').style.display = 'block';
+            document.getElementById('next-page').style.display = 'none';
+        };
+
+        // Example trigger for showing the next page (you can adjust as needed)
+        document.querySelector('.note-bubble.info').onclick = showNextPage;
+
+        // Play audio on user interaction
+        document.querySelector('.container').addEventListener('click', function() {
+            var audio = document.getElementById('background-audio');
+            if (audio.paused) {
+                audio.play();
+            }
+        });
+    </script>
+</body>
+</html>
